@@ -109,7 +109,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f8fafc] py-12 px-4 sm:px-6 lg:px-8">
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-50 no-print flex flex-col gap-3">
+      {/*<div className="fixed bottom-6 right-6 z-50 no-print flex flex-col gap-3">
         <button
           onClick={handleExportPDF}
           disabled={isExporting}
@@ -126,7 +126,7 @@ export default function App() {
           {isExporting ? <Loader2 className="h-5 w-5 animate-spin" /> : <Presentation className="h-5 w-5" />}
           Descargar PPTX
         </button>
-      </div>
+      </div>*/}
 
       <main className="container mx-auto max-w-4xl">
         {/* Document Wrapper */}
