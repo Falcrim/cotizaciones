@@ -5,7 +5,7 @@ import { FileText, Briefcase } from 'lucide-react';
 
 function Navigation() {
   const location = useLocation();
-  
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff]/80 backdrop-blur-md border-b border-[#f3f4f6] no-print">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -24,13 +24,12 @@ function Navigation() {
             <FileText className="h-4 w-4" />
             Cotización
           </Link>*/}
-          <Link 
-            to="/servicios" 
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${
-              location.pathname === '/servicios' 
-                ? 'bg-[#125b69] text-[#ffffff] shadow-md' 
+          <Link
+            to="/servicios"
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${location.pathname === '/servicios'
+                ? 'bg-[#125b69] text-[#ffffff] shadow-md'
                 : 'text-[#6b7280] hover:bg-[#f0f7f8] hover:text-[#125b69]'
-            }`}
+              }`}
           >
             <Briefcase className="h-4 w-4" />
             Servicios
@@ -47,7 +46,7 @@ export default function App() {
       <div className="pt-16">
         <Navigation />
         <Routes>
-          <Route path="/cotizaciones" element={<QuotationPage />} />
+          <Route path="/" element={<QuotationPage />} />
           <Route path="/servicios" element={<ServicesPage />} />
         </Routes>
       </div>
