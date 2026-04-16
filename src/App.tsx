@@ -47,7 +47,7 @@ export default function App() {
       <div className="pt-16">
         <Navigation />
         <Routes>
-          <Route path="/" element={<QuotationPage />} />
+          <Route path="/cotizaciones" element={<QuotationPage />} />
           <Route path="/servicios" element={<ServicesPage />} />
         </Routes>
       </div>
