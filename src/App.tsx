@@ -27,8 +27,8 @@ function Navigation() {
           <Link
             to="/servicios"
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all ${location.pathname === '/servicios'
-                ? 'bg-[#125b69] text-[#ffffff] shadow-md'
-                : 'text-[#6b7280] hover:bg-[#f0f7f8] hover:text-[#125b69]'
+              ? 'bg-[#125b69] text-[#ffffff] shadow-md'
+              : 'text-[#6b7280] hover:bg-[#f0f7f8] hover:text-[#125b69]'
               }`}
           >
             <Briefcase className="h-4 w-4" />
@@ -41,11 +41,14 @@ function Navigation() {
 }
 
 export default function App() {
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const base = isGitHubPages ? '/cotizaciones' : '';
   return (
-    <Router>
+    <Router basename={base}>
       <div className="pt-16">
         <Navigation />
         <Routes>
+          {/* Usa siempre "/" para la home, el basename hará el resto */}
           <Route path="/" element={<QuotationPage />} />
           <Route path="/servicios" element={<ServicesPage />} />
         </Routes>
