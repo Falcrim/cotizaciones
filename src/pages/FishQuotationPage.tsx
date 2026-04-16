@@ -394,8 +394,64 @@ export default function FishQuotationPage() {
                   </li>
                 </ul>
               </div>
+            </div>
 
-              <footer className="mt-16 pt-8 border-t border-[#f3f4f6] flex flex-col md:flex-row justify-between items-center text-[10px] text-[#9ca3af] uppercase tracking-widest font-semibold">
+            <div className="page-break"></div>
+
+              <div className="export-section pt-8">
+                <div className="mb-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-[#f0f7f8] p-2 rounded-lg text-[#125b69]">
+                      <RefreshCw className="h-6 w-6" />
+                    </div>
+                    <h2 className="text-2xl font-bold text-[#111827]">11. Mantenimiento Mensual (Opcional)</h2>
+                  </div>
+                  <p className="text-sm text-[#4b5563] leading-relaxed mb-8">
+                    Para garantizar el correcto funcionamiento, seguridad y actualización de la página web, se ofrece un servicio de mantenimiento mensual.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                    <div className="bg-[#f9fafb] p-6 rounded-2xl border border-[#f3f4f6]">
+                      <h3 className="text-[#125b69] font-bold text-sm mb-4 uppercase tracking-wider flex items-center gap-2">
+                        <Check className="h-4 w-4" /> Incluye:
+                      </h3>
+                      <ul className="space-y-2 text-xs text-[#4b5563]">
+                        <li>• Actualización de WordPress y plugins</li>
+                        <li>• Revisión técnica general del sitio</li>
+                        <li>• Soporte continuo</li>
+                        <li>• Corrección de errores menores</li>
+                      </ul>
+                      <h3 className="text-[#f1b51c] font-bold text-sm mt-6 mb-4 uppercase tracking-wider flex items-center gap-2">
+                        <Zap className="h-4 w-4" /> Actualización de contenido:
+                      </h3>
+                      <ul className="space-y-2 text-xs text-[#4b5563]">
+                        <li>• Cambio semanal de banner en portada (imagen o video)</li>
+                        <li>• Ajustes básicos de contenido según necesidad</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-[#fef2f2] p-6 rounded-2xl border border-[#fee2e2]">
+                      <h3 className="text-[#991b1b] font-bold text-sm mb-4 uppercase tracking-wider">No incluye:</h3>
+                      <ul className="space-y-2 text-xs text-[#4b5563]">
+                        <li>• Nuevas funcionalidades</li>
+                        <li>• Rediseño de secciones</li>
+                        <li>• Desarrollo adicional</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#0a363e] rounded-2xl p-8 text-center text-[#ffffff] shadow-lg relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#125b69] opacity-20 transform translate-x-16 -translate-y-16 rounded-full"></div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#f1b51c] mb-2">Inversión Mensual</p>
+                    <div className="flex justify-center items-baseline gap-2 mb-2">
+                      <span className="text-5xl font-extrabold">300</span>
+                      <span className="text-xl font-bold text-[#f1b51c]">Bs / mes</span>
+                    </div>
+                    <p className="text-[10px] text-[#9ca3af] italic">(dependiendo del nivel de soporte requerido)</p>
+                  </div>
+                </div>
+
+                <footer className="mt-16 pt-8 border-t border-[#f3f4f6] flex flex-col md:flex-row justify-between items-center text-[10px] text-[#9ca3af] uppercase tracking-widest font-semibold">
                 <p>© {new Date().getFullYear()} KODO — Agencia Creativa.</p>
                 <div className="mt-4 md:mt-0 flex items-center gap-6">
                   <span className="flex items-center gap-1"><Mail className="h-3 w-3" /> villcuellar99@gmail.com</span>
