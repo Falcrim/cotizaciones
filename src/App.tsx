@@ -1,7 +1,8 @@
 import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import QuotationPage from './pages/QuotationPage';
 import ServicesPage from './pages/ServicesPage';
-import { FileText, Briefcase } from 'lucide-react';
+import { FileText, Briefcase, Fish } from 'lucide-react';
+import FishQuotationPage from './pages/FishQuotationPage';
 
 function Navigation() {
   const location = useLocation();
@@ -51,6 +52,7 @@ export default function App() {
           {/* Usa siempre "/" para la home, el basename hará el resto */}
           <Route path="/" element={<QuotationPage />} />
           <Route path="/servicios" element={<ServicesPage />} />
+          <Route path="/cotizacion-pescado" element={<FishQuotationPage />} />
         </Routes>
       </div>
     </Router>
