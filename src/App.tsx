@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import QuotationPage from './pages/QuotationPage';
 import ServicesPage from './pages/ServicesPage';
 import { FileText, Briefcase } from 'lucide-react';
@@ -44,7 +44,7 @@ export default function App() {
   const isGitHubPages = window.location.hostname.includes('github.io');
   const base = isGitHubPages ? '/cotizaciones' : '';
   return (
-    <Router basename={base}>
+    <Router>
       <div className="pt-16">
         <Navigation />
         <Routes>
