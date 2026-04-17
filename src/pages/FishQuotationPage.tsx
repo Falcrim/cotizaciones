@@ -345,7 +345,7 @@ export default function FishQuotationPage() {
                     <div className="text-[#125b69] transform scale-110 flex flex-col items-center">
                       <p className="text-[10px] uppercase tracking-widest font-bold text-[#125b69] mb-1">Inversión Final</p>
                       <div className="flex items-baseline gap-2">
-                        <p className="text-5xl font-extrabold text-[#0a363e]">3200</p>
+                        <p className="text-5xl font-extrabold text-[#0a363e]">3712</p>
                         <p className="text-xl font-bold text-[#f1b51c]">Bs</p>
                       </div>
                     </div>
@@ -444,7 +444,7 @@ export default function FishQuotationPage() {
                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#125b69] opacity-20 transform translate-x-16 -translate-y-16 rounded-full"></div>
                     <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#f1b51c] mb-2">Inversión Mensual</p>
                     <div className="flex justify-center items-baseline gap-2 mb-2">
-                      <span className="text-5xl font-extrabold">300</span>
+                      <span className="text-5xl font-extrabold">348</span>
                       <span className="text-xl font-bold text-[#f1b51c]">Bs / mes</span>
                     </div>
                     <p className="text-[10px] text-[#9ca3af] italic">(dependiendo del nivel de soporte requerido)</p>
