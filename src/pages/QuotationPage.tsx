@@ -17,9 +17,9 @@ export default function QuotationPage() {
       margin: [10, 0, 10, 0],
       filename: 'Propuesta_KODO_Play_Zone.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { 
-        scale: 2, 
-        useCORS: true, 
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
         logging: false,
         onclone: (clonedDoc: Document) => {
           Array.from(clonedDoc.styleSheets).forEach(sheet => {
@@ -58,7 +58,7 @@ export default function QuotationPage() {
       pres.layout = 'LAYOUT_16x9';
 
       const sections = containerRef.current.querySelectorAll('.export-section');
-      
+
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i] as HTMLElement;
         const canvas = await html2canvas(section, {
@@ -80,10 +80,10 @@ export default function QuotationPage() {
             });
           }
         });
-        
+
         const imgData = canvas.toDataURL('image/png');
         const slide = pres.addSlide();
-        
+
         slide.addImage({
           data: imgData,
           x: 0,
@@ -125,15 +125,15 @@ export default function QuotationPage() {
       </div>
 
       <main className="container mx-auto max-w-4xl">
-        <div 
-          id="propuesta-container" 
+        <div
+          id="propuesta-container"
           ref={containerRef}
           className="bg-[#ffffff] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)] rounded-2xl overflow-hidden print-border relative"
         >
           <div className="h-3 w-full" style={{ background: 'linear-gradient(to right, #125b69, #f1b51c)' }}></div>
 
           <div className="p-8 md:p-12">
-            
+
             <div className="export-section">
               <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-[#f3f4f6] pb-10 mb-10">
                 <div className="mb-6 md:mb-0">
@@ -169,19 +169,19 @@ export default function QuotationPage() {
                   </p>
                   <ul className="mt-3 space-y-2 text-sm text-[#4b5563]">
                     <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" /> 
+                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" />
                       Transmita calidad, confianza y experiencia.
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" /> 
+                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" />
                       Muestre de forma atractiva sus proyectos realizados.
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" /> 
+                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" />
                       Facilite el contacto con potenciales clientes.
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" /> 
+                      <Check className="h-5 w-5 text-[#f1b51c] flex-shrink-0" />
                       Refuerce su posicionamiento en el mercado.
                     </li>
                   </ul>
@@ -354,7 +354,7 @@ export default function QuotationPage() {
                 <div className="p-8 md:p-10 text-center">
                   <h2 className="text-2xl font-bold text-[#111827] mb-2">9. Inversión del Proyecto</h2>
                   <p className="text-[#6b7280] mb-8">Desarrollo integral de plataforma web corporativa.</p>
-                  
+
                   <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-8">
                     <div className="opacity-60 line-through">
                       <p className="text-sm uppercase tracking-wide font-semibold text-[#6b7280]">Precio Regular</p>
@@ -369,14 +369,80 @@ export default function QuotationPage() {
                   <div className="bg-[#f9fafb] inline-block px-6 py-3 rounded-xl border border-[#e5e7eb]">
                     <p className="text-sm font-semibold text-[#374151] uppercase mb-1">Forma de Pago</p>
                     <div className="flex gap-4 text-sm text-[#4b5563]">
-                      <span><strong className="text-[#125b69] text-lg">50%</strong> al iniciar</span>
+                      <span><strong className="text-[#125b69] text-lg">1000bs</strong> al iniciar</span>
                       <span className="text-[#d1d5db]">|</span>
-                      <span><strong className="text-[#125b69] text-lg">50%</strong> al finalizar</span>
+                      <span><strong className="text-[#125b69] text-lg">1000bs</strong> al finalizar</span>
+                      <span className="text-[#d1d5db]">|</span>
+                      <span><strong className="text-[#125b69] text-lg">500bs</strong> soporte post-entrega</span>
                     </div>
                   </div>
-                  <p className="text-xs text-[#9ca3af] mt-4">* Precio especial aplicado por relación cercana.</p>
+                  <p className="text-sm text-[#9ca3af] mt-4">* Precio sin factura.</p>
                 </div>
               </div>
+            </div>
+
+            <div className="page-break"></div>
+
+            <div className="export-section pt-8">
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-[#f0f7f8] p-2 rounded-lg text-[#125b69]">
+                    <RefreshCw className="h-6 w-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-[#111827]">10. Mantenimiento Mensual (Opcional)</h2>
+                </div>
+                <p className="text-sm text-[#4b5563] leading-relaxed mb-8">
+                  Para garantizar el correcto funcionamiento, seguridad y actualización de la página web, se ofrece un servicio de mantenimiento mensual.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                  <div className="bg-[#f9fafb] p-6 rounded-2xl border border-[#f3f4f6]">
+                    <h3 className="text-[#125b69] font-bold text-lg mb-4 uppercase tracking-wider flex items-center gap-2">
+                      <Check className="h-4 w-4" /> Incluye:
+                    </h3>
+                    <ul className="space-y-2 text-sm text-[#4b5563]">
+                      <li>• Actualización de WordPress y plugins</li>
+                      <li>• Revisión técnica general del sitio</li>
+                      <li>• Soporte continuo</li>
+                      <li>• Corrección de errores menores</li>
+                    </ul>
+                    <h3 className="text-[#f1b51c] font-bold text-sm mt-6 mb-4 uppercase tracking-wider flex items-center gap-2">
+                      <Zap className="h-4 w-4" /> Actualización de contenido:
+                    </h3>
+                    <ul className="space-y-2 text-sm text-[#4b5563]">
+                      <li>• Cambio semanal de banner en portada (imagen o video)</li>
+                      <li>• Ajustes básicos de contenido según necesidad</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-[#fef2f2] p-6 rounded-2xl border border-[#fee2e2]">
+                    <h3 className="text-[#991b1b] font-bold text-lg mb-4 uppercase tracking-wider">No incluye:</h3>
+                    <ul className="space-y-2 text-sm text-[#4b5563]">
+                      <li>• Nuevas funcionalidades</li>
+                      <li>• Rediseño de secciones</li>
+                      <li>• Desarrollo adicional</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-[#0a363e] rounded-2xl p-8 text-center text-[#ffffff] shadow-lg relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#125b69] opacity-20 transform translate-x-16 -translate-y-16 rounded-full"></div>
+                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#f1b51c] mb-2">Inversión Mensual</p>
+                  <div className="flex justify-center items-baseline gap-2 mb-2">
+                    <span className="text-5xl font-extrabold">350</span>
+                    <span className="text-xl font-bold text-[#f1b51c]">Bs / mes</span>
+                  </div>
+                  <p className="text-[10px] text-[#9ca3af] italic">(dependiendo del nivel de soporte requerido)</p>
+                </div>
+              </div>
+
+              <footer className="mt-16 pt-8 border-t border-[#f3f4f6] flex flex-col md:flex-row justify-between items-center text-[10px] text-[#9ca3af] uppercase tracking-widest font-semibold">
+                <p>© {new Date().getFullYear()} KODO — Agencia Creativa.</p>
+                <div className="mt-4 md:mt-0 flex items-center gap-6">
+                  <span className="flex items-center gap-1"><Mail className="h-3 w-3" /> villcuellar99@gmail.com</span>
+                  <span className="flex items-center gap-1"><Phone className="h-3 w-3" /> +591 78567545</span>
+                </div>
+              </footer>
             </div>
 
             <div className="page-break"></div>
