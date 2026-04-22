@@ -3,6 +3,7 @@ import QuotationPage from './pages/QuotationPage';
 import ServicesPage from './pages/ServicesPage';
 import { FileText, Briefcase, Fish } from 'lucide-react';
 import FishQuotationPage from './pages/FishQuotationPage';
+import VirtualStoreQuotationPage from './pages/VirtualStoreQuotationPage';
 
 function Navigation() {
   const location = useLocation();
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/" element={<QuotationPage />} />
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/cotizacion-pescado" element={<FishQuotationPage />} />
+          <Route path="/tienda-virtual" element={<VirtualStoreQuotationPage />} />
         </Routes>
       </div>
     </Router>
